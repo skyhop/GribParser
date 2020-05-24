@@ -5,6 +5,26 @@ namespace Skyhop.GribParser
 {
     public static class Extensions
     {
+        public static int ReadSectionLength(
+            string file, 
+            long offset, 
+            int sectionNumber)
+        {
+            using (var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read))
+            {
+                int length = fileStream.ReadInt(offset);
+                int section = fileStream.ReadShort(offset + 4);
+
+                if (section == sectionNumber)
+                {
+                    return length;
+                } else
+                {
+                    return 0;
+                }
+            }
+        }
+
         public static byte ReadByte(this FileStream stream, long index)
         {
             stream.Seek(index, SeekOrigin.Begin);
