@@ -13,7 +13,7 @@ namespace Skyhop.GribParser
             using (var fileStream = new FileStream(file, FileMode.Open, FileAccess.Read))
             {
                 int length = fileStream.ReadInt(offset);
-                int section = fileStream.ReadShort(offset + 4);
+                int section = fileStream.ReadByte(offset + 4);
 
                 if (section == sectionNumber)
                 {

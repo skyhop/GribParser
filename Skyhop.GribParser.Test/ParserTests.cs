@@ -16,7 +16,9 @@ namespace Skyhop.GribParser.Test
         [Fact]
         public void ParseIndicatorSection()
         {
-            var indicator = new Indicator(Common.TestFile, 0);
+            var gribFile = new GribFile(Common.TestFile);
+
+            var indicator = gribFile.Records[0].Indicator;
 
             Assert.True(indicator.Discipline == Tables.Disciplines.Meteorological, "Discipline is not meteorological");
             Assert.True(indicator.Edition == 2, "GRIB Edition is not 2");
@@ -26,7 +28,9 @@ namespace Skyhop.GribParser.Test
         [Fact]
         public void ParseIdentificationSection()
         {
-            var identification = new Identification(Common.TestFile, 16);
+            var gribFile = new GribFile(Common.TestFile);
+
+            var identification = gribFile.Records[0].Identification;
 
             Assert.True(identification.SectionLength == 21);
             Assert.True(identification.SectionNumber == 1);
@@ -49,20 +53,19 @@ namespace Skyhop.GribParser.Test
         [Fact]
         public void ParseLocalUseSection()
         {
-            var identification = new Identification(Common.TestFile, 16);
-            var localUse = new LocalUse(Common.TestFile, 16 + identification.SectionLength);
+            var gribFile = new GribFile(Common.TestFile);
 
-            Assert.True(localUse.Length == 72);
-            Assert.True(localUse.Number == 3);
+            var localUse = gribFile.Records[0].LocalUse;
+
+            Assert.True(localUse == null);
         }
 
         [Fact]
         public void ParseGridDefinitionSection()
         {
-            var identification = new Identification(Common.TestFile, 16);
-            var localUse = new LocalUse(Common.TestFile, 16 + identification.SectionLength);
+            var gribFile = new GribFile(Common.TestFile);
 
-            var gridDefinition = new GridDefinition(Common.TestFile, 16 + identification.SectionLength + localUse.Length);
+            var gridDefinition = gribFile.Records[0].GridDefinition;
         }
     }
 }
