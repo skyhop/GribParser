@@ -229,3 +229,14 @@ The following list shows which features have already been implemented, or still 
 - [ ] Template 5.61 - Grid Point Data - Simple Packing With Logarithm Pre-processing
 - [ ] Template 5.200 - Run Length Packing With Level Values
 
+**Data Template**
+
+- [ ] Template 7.0 - Grid Point Data - Simple Packing
+- [ ] Template 7.1 - Matrix Value at Grid Point - Simple Packing
+- [ ] Template 7.2 - Grid Point Data - Complex Packing
+- [ ] Template 7.3 - Grid Point Data - Complex Packing and Spatial Differencing
+- [ ] Template 7.4 - Grid Point Data - IEEE Floating Point Data
+- [ ] Template 7.40 - Grid Point Data - JPEG2000 Compression
+- [ ] Template 7.41 - Grid Point Data - Portable Network Graphics (PNG) format
+- [ ] Template 7.50 - Spectral Data - Simple Packing
+- [ ] Template 7.51 - Spectral Data - Complex Packing
