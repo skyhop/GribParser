@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Skyhop.GribParser.Sections
 {
-    public class LocalUse : Section
+    public class LocalUse : FileReader
     {
         public LocalUse(string file, long startIndex) : base(file, startIndex)
         {

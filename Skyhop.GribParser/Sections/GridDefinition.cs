@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Skyhop.GribParser.Sections
 {
-    public class GridDefinition : Section
+    public class GridDefinition : FileReader
     {
         public GridDefinition(string file, long startIndex) : base(file, startIndex)
         {

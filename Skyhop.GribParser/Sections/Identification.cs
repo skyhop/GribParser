@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Skyhop.GribParser.Sections
 {
-    public class Identification : Section
+    public class Identification : FileReader
     {
         public Identification(string file, long startIndex) : base(file, startIndex)
         {

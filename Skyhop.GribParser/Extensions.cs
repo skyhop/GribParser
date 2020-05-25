@@ -25,6 +25,16 @@ namespace Skyhop.GribParser
             }
         }
 
+        public static T SetIfNull<T>(ref T obj, Func<T> setter)
+        {
+            if (obj == null)
+            {
+                obj = setter.Invoke();
+            }
+
+            return obj;
+        }
+
         public static byte ReadByte(this FileStream stream, long index)
         {
             stream.Seek(index, SeekOrigin.Begin);
