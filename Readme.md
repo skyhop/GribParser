@@ -1,11 +1,11 @@
 Skyhop.GribParser
 =================
 
-The goal of this project is to create a project with which one can easily access the contents of a GRIB2 file from a .NET project.
+The goal of this project is to create a project with which one can easily access the contents of a GRIB2 file from a .NET project. Given the GRIB2 specification covers quite a lot use-cases you're expected to implement a template yourself, if it's not yet available. If you ask nicely a maintainer might help you out if you provide a GRIB file with said templates so that we can run at least a few tests.
 
 ## Current state of the project
 
-The following list shows which features have already been implemented, or still need to be implemented.
+The following list shows which features have already been implemented, or still need to be implemented. The list with features below is based on the documentation as found [here](https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/).
 
 - [x] Reading from a GRIB2 file
 - [x] Reading multiple records from a file
@@ -22,7 +22,7 @@ The following list shows which features have already been implemented, or still 
 		- [ ] Identification Template 1.1 - Paleontological Offset
 		- [ ] Identification Template 1.2 - Calendar Definition and Paleontological Offset
 	- [x] Table 1.6 - Type of Calendar
-- [-] Section 2 - Local Use Section
+- [ ] Section 2 - Local Use Section
 - [ ] Section 3 - Grid Definition Section
 	- [ ] Table 3.0 - Source of Grid Definition
 	- [ ] Table 3.1 - Grid Definition Template Number
